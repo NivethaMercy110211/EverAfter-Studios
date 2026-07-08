@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <title>EverAfter Studios — Luxury Wedding Photography & Videography</title>
+  <meta name="description" content="EverAfter Studios captures timeless wedding moments with cinematic photography and videography. Premium wedding packages, full portfolio, and booking available." />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════════ -->
+<nav class="everafter-navbar navbar navbar-expand-xl" id="mainNavbar">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand" href="index.html">
+      <img src="assets/images/logo.png" alt="EverAfter Studios Logo" class="brand-logo" onerror="this.style.display='none'" />
+      <span class="brand-text"><span class="brand-name">EverAfter <span>Studios</span></span><span class="brand-tagline">Capturing Forever</span></span>
+    </a>
+
+    <!-- Mobile: hamburger only -->
+    <div class="d-flex align-items-center gap-2 d-xl-none">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <!-- Desktop Nav -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" data-page="index.html">Home</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="about.html" data-page="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="photography.html" data-page="photography.html">Photography</a></li>
+        <li class="nav-item"><a class="nav-link" href="videography.html" data-page="videography.html">Videography</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html" data-page="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html" data-page="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html" data-page="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <button class="nav-toggle-btn theme-toggle-btn" aria-label="Toggle theme">
+          <i class="bi bi-moon-stars-fill theme-icon"></i>
+        </button>
+        <button class="nav-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL">
+          <span class="rtl-icon" aria-hidden="true">RTL</span>
+        </button>
+        <a href="login.html" class="btn-nav-login nav-link ms-2">
+          <i class="bi bi-person-circle me-1"></i> Login
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-start" id="navbarOffcanvas" tabindex="-1" aria-labelledby="offcanvasLabel">
+  <div class="offcanvas-header">
+    <a href="index.html" class="navbar-brand">
+      <img src="assets/images/logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'" />
+      <span class="brand-text"><span class="brand-name">EverAfter <span>Studios</span></span><span class="brand-tagline">Capturing Forever</span></span>
+    </a>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column p-0">
+    <ul class="navbar-nav flex-column">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+        <ul class="dropdown-menu mobile-home-menu">
+          <li><a class="dropdown-item active" href="index.html" data-page="index.html">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-page="home2.html">Home 2</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="about.html" data-page="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="photography.html" data-page="photography.html">Photography</a></li>
+      <li class="nav-item"><a class="nav-link" href="videography.html" data-page="videography.html">Videography</a></li>
+      <li class="nav-item"><a class="nav-link" href="portfolio.html" data-page="portfolio.html">Portfolio</a></li>
+      <li class="nav-item"><a class="nav-link" href="blog.html" data-page="blog.html">Blog</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html" data-page="contact.html">Contact</a></li>
+      <li class="nav-item px-3 py-2">
+        <a href="login.html" class="btn-nav-login d-inline-flex align-items-center gap-2 w-100 justify-content-center">
+          <i class="bi bi-person-circle"></i> Login
+        </a>
+      </li>
+    </ul>
+    <div class="mobile-toggles mt-auto">
+      <button class="nav-toggle-btn theme-toggle-btn" aria-label="Toggle theme">
+        <i class="bi bi-moon-stars-fill theme-icon"></i>
+      </button>
+      
+      <button class="nav-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL">
+        <span class="rtl-icon" aria-hidden="true">RTL</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ HERO BANNER ══════════════════════ -->
+<section class="page-banner hero-banner">
+  <img src="assets/images/home1-hero.jpg" alt="Luxury Wedding Photography" class="banner-img" />
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7" data-aos="fade-up" data-aos-duration="1100">
+          <div class="banner-card">
+            <span class="banner-tag">Capturing Forever</span>
+            <h1 class="banner-title">We Tell Your<br />Love Story</h1>
+            <p class="banner-desc">Cinematic wedding photography and videography for couples who want their celebration remembered with elegance, emotion, and detail. From quiet getting-ready moments to grand family rituals, we preserve your day as a timeless visual heirloom.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="portfolio.html" class="btn-primary-ea">
+                <i class="bi bi-images"></i> View Portfolio
+              </a>
+              <a href="contact.html" class="btn-outline-ea">
+                <i class="bi bi-calendar3"></i> Book a Date
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FEATURED WEDDING STORIES ═══════════════ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-label">Love Stories</span>
+      <h2 class="section-title">Featured Wedding Stories</h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">Every wedding carries its own rhythm, culture, and emotional language. We document the laughter, rituals, decor, family bonds, and stolen glances that make each celebration feel deeply personal.</p>
+    </div>
+    <div class="row g-4 row-center-last">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-equal-height">
+          <div class="card-img-wrapper">
+            <img src="assets/images/story-garden.jpg" alt="Ananya & Rohan Wedding" class="card-img-fixed" onerror="this.style.background='linear-gradient(135deg,#C9A96E,#7B2D42)';this.style.height='240px'" />
+          </div>
+          <div class="card-body-ea">
+            <span class="blog-cat">Garden Wedding</span>
+            <h3 class="card-title-ea">Ananya &amp; Rohan's Garden Ceremony</h3>
+            <p class="card-text-ea">A dreamy outdoor celebration surrounded by roses, string lights, and soft golden-hour color. We focused on natural couple portraits, emotional family reactions, and the romantic garden atmosphere that made the evening unforgettable.</p>
+            <div class="card-footer-ea">
+              <a href="portfolio.html" class="blog-read-more">View Story <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-equal-height">
+          <div class="card-img-wrapper">
+            <img src="assets/images/story-heritage.jpg" alt="Priya & Arjun Wedding" class="card-img-fixed" onerror="this.style.background='linear-gradient(135deg,#C08080,#C9A96E)';this.style.height='240px'" />
+          </div>
+          <div class="card-body-ea">
+            <span class="blog-cat">Heritage Wedding</span>
+            <h3 class="card-title-ea">Priya &amp; Arjun's Royal Heritage Affair</h3>
+            <p class="card-text-ea">A magnificent celebration set inside a 200-year-old palace, where traditional grandeur met modern elegance. Every frame was composed to highlight ornate architecture, heirloom jewelry, ceremonial details, and the couple's regal presence.</p>
+            <div class="card-footer-ea">
+              <a href="portfolio.html" class="blog-read-more">View Story <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card-equal-height">
+          <div class="card-img-wrapper">
+            <img src="assets/images/story-beach.jpg" alt="Meera & Vikram Wedding" class="card-img-fixed" onerror="this.style.background='linear-gradient(135deg,#7B2D42,#C9A96E)';this.style.height='240px'" />
+          </div>
+          <div class="card-body-ea">
+            <span class="blog-cat">Beach Wedding</span>
+            <h3 class="card-title-ea">Meera &amp; Vikram's Beachside Romance</h3>
+            <p class="card-text-ea beachside-story-text">
+              <span class="beach-line-mobile">Waves, golden sand, and an amber evening sky created the perfect canvas for a barefoot ceremony by the sea. The gallery blends airy portraits, candid guest moments, and warm coastal details from start to finish.</span>
+              <span class="beach-line-tablet">Waves, golden sand, and an amber</span><span class="beach-line-tablet">evening sky created the perfect</span><span class="beach-line-tablet">canvas for a barefoot ceremony by</span><span class="beach-line-tablet">the sea. The gallery blends airy</span><span class="beach-line-tablet">portraits, candid guest moments,</span><span class="beach-line-tablet">and warm coastal details from</span><span class="beach-line-tablet">start to finish.</span>
+              <span class="beach-line-desktop">Waves, golden sand, and an amber evening sky</span><span class="beach-line-desktop">created the perfect canvas for a barefoot</span><span class="beach-line-desktop">ceremony by the sea. The gallery blends airy</span><span class="beach-line-desktop">portraits, candid guest moments, and warm</span><span class="beach-line-desktop">coastal details from start to finish.</span>
+            </p>
+            <div class="card-footer-ea">
+              <a href="portfolio.html" class="blog-read-more">View Story <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════ PACKAGES ════════════════════════ -->
+<section class="section-pad bg-surface">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-label">Our Offerings</span>
+      <h2 class="section-title">Photography &amp; Videography Packages</h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">Thoughtfully curated packages for intimate ceremonies, multi-day celebrations, and destination weddings. Each option includes planning support, edited deliverables, secure backups, and private online gallery access for family sharing.</p>
+    </div>
+    <div class="row g-4 row-center-last">
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="package-card h-100">
+          <div class="package-icon"><i class="bi bi-camera2"></i></div>
+          <div class="package-name">Essentials</div>
+          <div class="package-price"><sup>&#8377;</sup>45,000<span>/day</span></div>
+          <p class="package-desc">Perfect for intimate ceremonies, registry weddings, and small family celebrations that need focused professional coverage without a large production crew.</p>
+          <ul class="package-features">
+            <li><i class="bi bi-check-circle-fill"></i> 8 Hours Coverage</li>
+            <li><i class="bi bi-check-circle-fill"></i> 1 Photographer</li>
+            <li><i class="bi bi-check-circle-fill"></i> 300+ Edited Photos</li>
+            <li><i class="bi bi-check-circle-fill"></i> Online Gallery</li>
+            <li><i class="bi bi-check-circle-fill"></i> USB Delivery</li>
+            <li><i class="bi bi-check-circle-fill"></i> 30 Fine Art Prints</li>
+          </ul>
+          <a href="contact.html" class="btn-outline-gold mt-auto">Book Now</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="package-card featured h-100">
+          <span class="package-badge">Most Popular</span>
+          <div class="package-icon"><i class="bi bi-camera-video-fill"></i></div>
+          <div class="package-name">Signature</div>
+          <div class="package-price"><sup>&#8377;</sup>85,000<span>/day</span></div>
+          <p class="package-desc">Our flagship package combines complete photography coverage with a cinematic highlight film, making it ideal for couples who want both still memories and motion storytelling.</p>
+          <ul class="package-features">
+            <li><i class="bi bi-check-circle-fill"></i> 12 Hours Coverage</li>
+            <li><i class="bi bi-check-circle-fill"></i> 2 Photographers + 1 Videographer</li>
+            <li><i class="bi bi-check-circle-fill"></i> 600+ Edited Photos</li>
+            <li><i class="bi bi-check-circle-fill"></i> 10-min Cinematic Film</li>
+            <li><i class="bi bi-check-circle-fill"></i> Pre-wedding Shoot</li>
+            <li><i class="bi bi-check-circle-fill"></i> Premium Album</li>
+          </ul>
+          <a href="contact.html" class="btn-primary-ea mt-auto">Book Now</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="package-card h-100">
+          <div class="package-icon"><i class="bi bi-stars"></i></div>
+          <div class="package-name">Prestige</div>
+          <div class="package-price"><sup>&#8377;</sup>1,50,000<span>/day</span></div>
+          <p class="package-desc">An all-inclusive luxury experience designed for destination weddings, large guest lists, multiple ceremonies, premium albums, drone footage, and same-day highlight edits.</p>
+          <ul class="package-features">
+            <li><i class="bi bi-check-circle-fill"></i> 2-Day Full Coverage</li>
+            <li><i class="bi bi-check-circle-fill"></i> 3 Photographers + Drone</li>
+            <li><i class="bi bi-check-circle-fill"></i> 1000+ Edited Photos</li>
+            <li><i class="bi bi-check-circle-fill"></i> Feature Length Film</li>
+            <li><i class="bi bi-check-circle-fill"></i> Same-Day Edit Highlights</li>
+            <li><i class="bi bi-check-circle-fill"></i> Luxury Photo Book</li>
+          </ul>
+          <a href="contact.html" class="btn-outline-gold mt-auto">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ WHY CHOOSE US ══════════════════════ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 pt-lg-4" data-aos="fade-right" data-aos-duration="1100">
+        <div class="img-reveal-wrap home-why-image">
+          <img src="assets/images/gallery-06.jpg" alt="EverAfter Studios Photographer" onerror="this.style.background='linear-gradient(135deg,#C9A96E22,#7B2D4222)';this.alt=''" />
+          <div class="img-badge">
+            <div class="badge-num">12+</div>
+            <div class="badge-lbl">Years of Excellence</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1100">
+        <span class="section-label">Why EverAfter</span>
+        <h2 class="section-title text-start">Why Couples Choose Us</h2>
+        <div class="gold-divider" style="margin:0 0 1.5rem"></div>
+        <p class="text-muted-ea mb-4">We do more than arrive with cameras. We study your timeline, understand the important family dynamics, coordinate with planners, and stay alert to meaningful moments as they unfold. Our photographers and filmmakers combine editorial polish with documentary patience so the final gallery feels both beautiful and honest.</p>
+        <div class="row g-3 mt-1">
+          <div class="col-sm-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-award-fill"></i></div>
+              <div class="feature-title">Award-Winning Team</div>
+              <p class="feature-text">Recognized nationally for wedding photography, cinematic films, and client experience across multiple award platforms and curated wedding publications.</p>
+            </div>
+          </div>
+          <div class="col-sm-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-heart-fill"></i></div>
+              <div class="feature-title">Emotionally Driven</div>
+              <p class="feature-text">We focus on real moments: candid laughter, happy tears, quiet glances, nervous hands, family blessings, and the emotional pauses between big events.</p>
+            </div>
+          </div>
+          <div class="col-sm-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-camera-fill"></i></div>
+              <div class="feature-title">Pro-Grade Equipment</div>
+              <p class="feature-text">Full-frame cameras, cinema bodies, prime lenses, drones, audio kits, and professional lighting rigs help us stay prepared for bright mandaps, dim ballrooms, and outdoor nights.</p>
+            </div>
+          </div>
+          <div class="col-sm-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="bi bi-clock-history"></i></div>
+              <div class="feature-title">Fast Turnaround</div>
+              <p class="feature-text fast-turnaround-text">Teaser gallery within 48 hours, full gallery<br class="desktop-break" /> in 3 to 4 weeks, and wedding films in 6 to<br class="desktop-break" /> 8 weeks with clear delivery milestones<br class="desktop-break" /> throughout the process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ STATS BAR ══════════════════════════ -->
+<section class="stats-bar" data-aos="fade-up">
+  <div class="container">
+    <div class="row g-0 text-center">
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <div class="stat-number" data-count="850" data-suffix="+">0+</div>
+          <div class="stat-label">Weddings Captured</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <div class="stat-number" data-count="12" data-suffix=" Yrs">0 Yrs</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <div class="stat-number" data-count="24" data-suffix="+">0+</div>
+          <div class="stat-label">Awards Won</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <div class="stat-number" data-count="98" data-suffix="%">0%</div>
+          <div class="stat-label">Happy Couples</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ PORTFOLIO PREVIEW ════════════════════ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-title">Portfolio Preview</h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">A glimpse into the visual world of EverAfter Studios, from emotional ceremonies and bridal portraits to reception details, pre-wedding sessions, and candid celebrations.</p>
+    </div>
+    <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="gallery-item" data-src="assets/images/gallery-01.jpg">
+        <img src="assets/images/gallery-01.jpg" alt="Wedding Ceremony" onerror="this.style.background='linear-gradient(135deg,#C9A96E,#7B2D42)';this.alt=''" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-content"><h5>Vow Exchange</h5><small>Garden Wedding</small></div>
+        </div>
+        <div class="gallery-zoom-btn"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item" data-src="assets/images/gallery-02.jpg">
+        <img src="assets/images/gallery-02.jpg" alt="Bride Preparation" onerror="this.style.background='linear-gradient(135deg,#C08080,#C9A96E)';this.alt=''" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-content"><h5>Getting Ready</h5><small>Bridal Portraits</small></div>
+        </div>
+        <div class="gallery-zoom-btn"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item" data-src="assets/images/gallery-03.jpg">
+        <img src="assets/images/gallery-03.jpg" alt="First Dance" onerror="this.style.background='linear-gradient(135deg,#7B2D42,#C08080)';this.alt=''" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-content"><h5>First Dance</h5><small>Reception</small></div>
+        </div>
+        <div class="gallery-zoom-btn"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item" data-src="assets/images/gallery-04.jpg">
+        <img src="assets/images/gallery-04.jpg" alt="Pre-wedding Shoot" onerror="this.style.background='linear-gradient(135deg,#A8894E,#C9A96E)';this.alt=''" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-content"><h5>Golden Hour Shoot</h5><small>Pre-Wedding</small></div>
+        </div>
+        <div class="gallery-zoom-btn"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item" data-src="assets/images/gallery-05.jpg">
+        <img src="assets/images/gallery-05.jpg" alt="Traditional Wedding" onerror="this.style.background='linear-gradient(135deg,#7B2D42,#A8894E)';this.alt=''" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-content"><h5>Traditional Ceremony</h5><small>Cultural Wedding</small></div>
+        </div>
+        <div class="gallery-zoom-btn"><i class="bi bi-zoom-in"></i></div>
+      </div>
+      <div class="gallery-item" data-src="assets/images/gallery-01.jpg">
+        <img src="assets/images/forgot-bg.jpg" alt="Candid Moments" onerror="this.style.background='linear-gradient(135deg,#C08080,#7B2D42)';this.alt=''" />
+        <div class="gallery-overlay">
+          <div class="gallery-overlay-content"><h5>Candid Joy</h5><small>Reception</small></div>
+        </div>
+        <div class="gallery-zoom-btn"><i class="bi bi-zoom-in"></i></div>
+      </div>
+    </div>
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="portfolio.html" class="btn-primary-ea"><i class="bi bi-grid-3x3-gap-fill"></i> View Full Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TESTIMONIALS ═════════════════════════ -->
+<section class="section-pad bg-surface">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-label">Client Love</span>
+      <h2 class="section-title">What Our Couples Say</h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">Hundreds of couples have trusted us with once-in-a-lifetime celebrations. Their words reflect the care, calm presence, and attention to detail we bring before, during, and after the wedding day.</p>
+    </div>
+    <div class="row g-4 row-center-last testimonials-grid">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card">
+          <div class="stars-wrap">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text testimonial-six-line">
+            <span class="testimonial-mobile-text">"EverAfter Studios captured our wedding in the most magical way. Every photo feels like a painting, but still feels completely real. They guided us gently, handled our families with patience, and gave us an album we keep revisiting with happy tears."</span>
+            <span class="testimonial-tablet-line">"EverAfter Studios captured our wedding</span><span class="testimonial-tablet-line">in the most magical way. Every photo</span><span class="testimonial-tablet-line">feels like a painting, but still feels</span><span class="testimonial-tablet-line">completely real. They guided us gently,</span><span class="testimonial-tablet-line">handled our families with patience, and</span><span class="testimonial-tablet-line">gave us happy tears."</span>
+            <span class="testimonial-desktop-line">"EverAfter Studios captured</span><span class="testimonial-desktop-line">our wedding in the most</span><span class="testimonial-desktop-line">magical way. Every photo</span><span class="testimonial-desktop-line">feels like a painting, but</span><span class="testimonial-desktop-line">still completely real. They</span><span class="testimonial-desktop-line">gave us an album we keep</span><span class="testimonial-desktop-line">revisiting with happy tears."</span>
+          </p>
+          <div class="testimonial-author">
+            <img src="assets/images/avatar-ananya.jpg" alt="Ananya Sharma" class="testimonial-avatar" />
+            <div>
+              <div class="testimonial-name">Ananya Sharma</div>
+              <div class="testimonial-role">Married, March 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card">
+          <div class="stars-wrap">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+          </div>
+          <p class="testimonial-text testimonial-desktop-lines"><span>"From the first meeting</span><span>to the final delivery,</span><span>the team was professional,</span><span>warm, and organized. Our</span><span>wedding film captured the</span><span>speeches, rituals, and tiny</span><span>expressions we missed."</span></p>
+          <div class="testimonial-author">
+            <img src="assets/images/avatar-priya.jpg" alt="Priya & Arjun Mehta" class="testimonial-avatar" />
+            <div>
+              <div class="testimonial-name">Priya &amp; Arjun Mehta</div>
+              <div class="testimonial-role">Married, January 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-card">
+          <div class="stars-wrap">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+          </div>
+          <p class="testimonial-text testimonial-desktop-lines"><span>"The team blended into</span><span>our guests so naturally</span><span>that we barely noticed</span><span>the cameras, yet they</span><span>caught every precious</span><span>moment full of the people</span><span>we love most."</span></p>
+          <div class="testimonial-author">
+            <img src="assets/images/avatar-riya.jpg" alt="Riya & Karthik Nair" class="testimonial-avatar" />
+            <div>
+              <div class="testimonial-name">Riya &amp; Karthik Nair</div>
+              <div class="testimonial-role">Married, December 2024</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ DATE AVAILABILITY CTA ════════════════ -->
+<section class="cta-section">
+  <img src="assets/images/cta-home.jpg" alt="Book EverAfter Studios" class="banner-img" onerror="this.style.display='none'" />
+  <div class="cta-overlay"></div>
+  <div class="cta-content container" data-aos="zoom-in" data-aos-duration="1000">
+    <span class="script-font d-block mb-2" style="font-size:2rem">Is Your Date Available?</span>
+    <h2 class="cta-title">Begin Your EverAfter Story</h2>
+    <p class="cta-text">Popular wedding dates fill quickly, especially during peak season. Share your venue, rituals, guest count, and creative preferences so we can recommend the right coverage plan and reserve your date with confidence.</p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <a href="contact.html" class="btn-primary-ea"><i class="bi bi-calendar-check"></i> Check Availability</a>
+      <a href="tel:+919876543210" class="btn-outline-ea"><i class="bi bi-telephone-fill"></i> Call Us Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ FOOTER ═══════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Brand -->
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-brand">
+          <a class="footer-brand-link" href="index.html" aria-label="EverAfter Studios home"><img src="assets/images/logo.png" alt="EverAfter Studios" class="footer-brand-logo" onerror="this.style.display='none'" /><span class="footer-brand-text"><span class="brand-name-footer">EverAfter <span>Studios</span></span><span class="script-sub">Capturing Forever</span></span></a>
+          <p>We are dedicated to creating timeless wedding memories through the art of cinematic photography and film.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+          <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Photography</a></li>
+          <li><a href="videography.html"><i class="bi bi-chevron-right"></i> Videography</a></li>
+          <li><a href="portfolio.html"><i class="bi bi-chevron-right"></i> Portfolio</a></li>
+          <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <!-- Services -->
+      <div class="col-lg-2 col-md-6">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Bridal Portraits</a></li>
+          <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Couple Shoots</a></li>
+          <li><a href="videography.html"><i class="bi bi-chevron-right"></i> Wedding Films</a></li>
+          <li><a href="videography.html"><i class="bi bi-chevron-right"></i> Drone Coverage</a></li>
+          <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Pre-Wedding Shoots</a></li>
+          <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Custom Packages</a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div class="col-lg-2 col-md-6">
+        <h4 class="footer-heading">Contact</h4>
+        <div class="footer-contact-item">
+          <i class="bi bi-geo-alt-fill"></i>
+          <span>42, Rose Garden Lane, Indiranagar, Bengaluru — 560038</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="bi bi-telephone-fill"></i>
+          <span>+91 98765 43210</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="bi bi-envelope-fill"></i>
+          <span>hello@everafterstudios.in</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="bi bi-clock-fill"></i>
+          <span>Mon–Sat: 10am – 7pm</span>
+        </div>
+      </div>
+      <!-- Newsletter -->
+      <div class="col-lg-3 col-md-6">
+        <h4 class="footer-heading">Newsletter</h4>
+        <p style="font-size:0.86rem;color:var(--clr-footer-text);opacity:0.8;margin-bottom:1rem">Subscribe for wedding inspiration, tips, and behind-the-scenes stories delivered to your inbox.</p>
+        <form class="newsletter-form" data-demo="true">
+          <div class="input-group-footer">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit"><i class="bi bi-send-fill"></i> Subscribe</button>
+          </div>
+          <p class="footer-note">No spam, ever. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p>&copy; 2026 EverAfter Studios. All rights reserved. Crafted with <i class="bi bi-heart-fill text-danger"></i> in Bengaluru.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Refund Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox-overlay">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightbox-close"><i class="bi bi-x-lg"></i></button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev"><i class="bi bi-chevron-left"></i></button>
+    <img id="lightbox-img" src="" alt="Gallery Image" />
+    <button class="lightbox-nav lightbox-next" id="lightbox-next"><i class="bi bi-chevron-right"></i></button>
+  </div>
+</div>
+
+<!-- Scroll Top -->
+<button class="scroll-top-btn" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

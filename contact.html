@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <title>Contact — EverAfter Studios | Book Your Wedding Photography</title>
+  <meta name="description"
+    content="Contact EverAfter Studios to check date availability, enquire about packages, and begin planning your wedding photography coverage." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="everafter-navbar navbar navbar-expand-xl" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="EverAfter Studios"
+          class="brand-logo" onerror="this.style.display='none'" /><span class="brand-text"><span
+            class="brand-name">EverAfter <span>Studios</span></span><span class="brand-tagline">Capturing
+            Forever</span></span></a>
+      <div class="d-flex align-items-center gap-2 d-xl-none">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"><span
+            class="navbar-toggler-icon"></span></button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+              <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="photography.html">Photography</a></li>
+          <li class="nav-item"><a class="nav-link" href="videography.html">Videography</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html" data-page="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <button class="nav-toggle-btn theme-toggle-btn"><i class="bi bi-moon-stars-fill theme-icon"></i></button>
+          <button class="nav-toggle-btn rtl-toggle-btn"><span class="rtl-icon" aria-hidden="true">RTL</span></button>
+          <a href="login.html" class="btn-nav-login nav-link ms-2"><i class="bi bi-person-circle me-1"></i> Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-start" id="navbarOffcanvas" tabindex="-1">
+    <div class="offcanvas-header"><a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Logo"
+          class="brand-logo" onerror="this.style.display='none'" /><span class="brand-text"><span
+            class="brand-name">EverAfter <span>Studios</span></span><span class="brand-tagline">Capturing
+            Forever</span></span></a><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+    <div class="offcanvas-body d-flex flex-column p-0">
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Home</a>
+          <ul class="dropdown-menu mobile-home-menu">
+            <li><a class="dropdown-item" href="index.html" data-page="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html" data-page="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="photography.html">Photography</a></li>
+        <li><a class="nav-link" href="videography.html">Videography</a></li>
+        <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li><a class="nav-link" href="blog.html">Blog</a></li>
+        <li><a class="nav-link active" href="contact.html">Contact</a></li>
+        <li class="px-3 py-2"><a href="login.html"
+            class="btn-nav-login d-flex align-items-center justify-content-center gap-2 w-100"><i
+              class="bi bi-person-circle"></i> Login</a></li>
+      </ul>
+      <div class="mobile-toggles mt-auto"><button class="nav-toggle-btn theme-toggle-btn"><i
+            class="bi bi-moon-stars-fill theme-icon"></i></button><button class="nav-toggle-btn rtl-toggle-btn"><span
+            class="rtl-icon" aria-hidden="true">RTL</span></button></div>
+    </div>
+  </div>
+
+  <!-- BANNER -->
+  <section class="page-banner" style="min-height:420px">
+    <img src="assets/images/contact-hero.jpg" alt="Contact EverAfter Studios" class="banner-img"
+      onerror="this.style.display='none'" />
+    <div class="banner-overlay"></div>
+    <div class="banner-content">
+      <div class="container">
+        <div class="banner-card">
+          <div class="breadcrumb-custom"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
+          <span class="banner-tag">Let's Connect</span>
+          <h1 class="banner-title">Contact Us</h1>
+          <p class="banner-desc">Ready to start planning your wedding photography and film coverage? Share your date, venue, rituals, and creative preferences so we can guide you toward the right package and create something meaningful together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATE AVAILABILITY FORM -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1100">
+          <div class="text-center mb-5">
+            <span class="section-label">Check Your Date</span>
+            <h2 class="section-title">Date Availability Enquiry</h2>
+            <div class="gold-divider"></div>
+            <p class="section-subtitle mb-0">Fill in your wedding details below and we will respond within 24 hours with availability, package guidance, next steps, and any planning questions needed to understand your celebration properly.</p>
+          </div>
+          <div
+            style="background:var(--clr-card-bg);border:1px solid var(--clr-border);border-radius:16px;padding:2.5rem;box-shadow:var(--shadow-sm)">
+            <form data-demo="true" id="availabilityForm">
+              <div class="row g-3">
+                <div class="col-sm-6 form-group-ea">
+                  <label class="form-label-ea" for="brideNameAvail">Bride's Name</label>
+                  <input type="text" class="form-control-ea" id="brideNameAvail" placeholder="Your name" required />
+                </div>
+                <div class="col-sm-6 form-group-ea">
+                  <label class="form-label-ea" for="groomNameAvail">Groom's Name</label>
+                  <input type="text" class="form-control-ea" id="groomNameAvail" placeholder="Partner's name"
+                    required />
+                </div>
+                <div class="col-sm-6 form-group-ea">
+                  <label class="form-label-ea" for="emailAvail">Email Address</label>
+                  <input type="email" class="form-control-ea" id="emailAvail" placeholder="hello@email.com" required />
+                </div>
+                <div class="col-sm-6 form-group-ea">
+                  <label class="form-label-ea" for="phoneAvail">Phone Number</label>
+                  <input type="tel" class="form-control-ea" id="phoneAvail" placeholder="+91 98765 43210" />
+                </div>
+                <div class="col-sm-6 form-group-ea">
+                  <label class="form-label-ea" for="weddingDateAvail">Wedding Date</label>
+                  <input type="date" class="form-control-ea" id="weddingDateAvail" required />
+                </div>
+                <div class="col-sm-6 form-group-ea">
+                  <label class="form-label-ea" for="venueAvail">Wedding Venue / City</label>
+                  <input type="text" class="form-control-ea" id="venueAvail" placeholder="Bengaluru / Palace Hotel" />
+                </div>
+                <div class="col-sm-6 form-group-ea">
+                  <label class="form-label-ea" for="guestCountAvail">Approximate Guest Count</label>
+                  <select class="form-control-ea" id="guestCountAvail">
+                    <option value="">Select range</option>
+                    <option>Under 50 guests</option>
+                    <option>50–150 guests</option>
+                    <option>150–300 guests</option>
+                    <option>300+ guests</option>
+                  </select>
+                </div>
+                <div class="col-sm-6 form-group-ea">
+                  <label class="form-label-ea" for="serviceAvail">Service Required</label>
+                  <select class="form-control-ea" id="serviceAvail">
+                    <option value="">Select service</option>
+                    <option>Photography Only</option>
+                    <option>Videography Only</option>
+                    <option>Photography + Videography</option>
+                    <option>Pre-Wedding Shoot</option>
+                    <option>Full Package (Photo + Video + Pre-wedding)</option>
+                  </select>
+                </div>
+                <div class="col-12 form-group-ea">
+                  <label class="form-label-ea" for="messageAvail">Tell Us About Your Wedding</label>
+                  <textarea class="form-control-ea" id="messageAvail" rows="4"
+                    placeholder="Share your wedding vision, style preferences, special moments you want captured..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn-primary-ea w-100" style="justify-content:center;padding:0.85rem"><i
+                      class="bi bi-calendar-check"></i> Check Availability &amp; Send Enquiry</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FIND US (CONTACT DETAILS) ════════════════ -->
+  <section class="section-pad bg-surface">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Connect</span>
+        <h2 class="section-title">Find Us</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">Reach out to our team, schedule a visit to our Indiranagar studio, or call us directly. We are always happy to discuss your wedding plans over coffee.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1: Studio Address -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-info-card-grid">
+            <div class="contact-grid-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <h3 class="contact-grid-title contact-line-title"><span>Studio</span><span>Address</span></h3>
+            <p class="contact-grid-value">42, Rose Garden Lane, Indiranagar<br />Bengaluru, Karnataka — 560038</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Call & WhatsApp -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="contact-info-card-grid">
+            <div class="contact-grid-icon"><i class="bi bi-telephone-fill"></i></div>
+            <h3 class="contact-grid-title contact-line-title"><span>Call &amp;</span><span>WhatsApp</span></h3>
+            <p class="contact-grid-value contact-line-value">
+              <span><a href="tel:+919876543210" style="color:inherit;text-decoration:none">+91 98765 43210</a></span>
+              <span><a href="https://wa.me/919876543210" target="_blank" style="color:inherit;text-decoration:none">Message on WhatsApp</a></span>
+              <span>Quick booking support</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Email Address -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="contact-info-card-grid">
+            <div class="contact-grid-icon"><i class="bi bi-envelope-fill"></i></div>
+            <h3 class="contact-grid-title contact-line-title"><span>Email</span><span>Address</span></h3>
+            <p class="contact-grid-value contact-line-value">
+              <span><a href="mailto:hello@everafterstudios.in" style="color:inherit;text-decoration:none">hello@everafterstudios.in</a></span>
+              <span>General &amp; Booking</span>
+              <span>queries</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4: Studio Hours -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="contact-info-card-grid">
+            <div class="contact-grid-icon"><i class="bi bi-clock-fill"></i></div>
+            <h3 class="contact-grid-title contact-line-title"><span>Studio</span><span>Hours</span></h3>
+            <p class="contact-grid-value">Monday – Saturday: 10am – 7pm<br />Sunday: By appointment only</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ OUR LOCATION (STUDIO MAP) ═══════════════ -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Our Location</span>
+        <h2 class="section-title">Find the Studio</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">Located in the heart of Indiranagar, Bengaluru. We recommend scheduling an appointment before visiting to make sure our creative director is available to meet with you.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="zoom-in" data-aos-duration="1100">
+          <div class="map-placeholder-large">
+            <iframe
+              src="https://maps.google.com/maps?q=Indiranagar,%20Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%" style="border:0;filter:grayscale(15%)" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="EverAfter Studios Location">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOLLOW OUR WORK ════════════════════════ -->
+  <section class="section-pad bg-surface">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Connect</span>
+        <h2 class="section-title">Follow Our Work</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">Join our community on social media to see our latest wedding galleries, cinematic film teasers, real-time updates, and behind-the-scenes stories.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1: Instagram -->
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="social-card">
+            <div class="social-icon instagram"><i class="bi bi-instagram"></i></div>
+            <h3 class="social-name">Instagram</h3>
+            <p class="social-handle">@everafterstudios</p>
+            <span class="social-action">View Gallery <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- Card 2: Facebook -->
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="social-card">
+            <div class="social-icon facebook"><i class="bi bi-facebook"></i></div>
+            <h3 class="social-name">Facebook</h3>
+            <p class="social-handle">/everafterstudios</p>
+            <span class="social-action">Follow Page <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- Card 3: YouTube -->
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="social-card">
+            <div class="social-icon youtube"><i class="bi bi-youtube"></i></div>
+            <h3 class="social-name">YouTube</h3>
+            <p class="social-handle">EverAfter Studios</p>
+            <span class="social-action">Watch Films <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- Card 4: Pinterest -->
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <a href="#" class="social-card">
+            <div class="social-icon pinterest"><i class="bi bi-pinterest"></i></div>
+            <h3 class="social-name">Pinterest</h3>
+            <p class="social-handle">@everafterstudios</p>
+            <span class="social-action">See Boards <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGE ENQUIRY FORM -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Request a Quote</span>
+        <h2 class="section-title">Package Enquiry Form</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">Need a custom package? Tell us about your ceremonies, guest count, travel plans, album needs, film expectations, and budget so we can create a quote tailored to your wedding.</p>
+      </div>
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-8">
+          <div
+            style="background:var(--clr-card-bg);border:1px solid var(--clr-border);border-radius:16px;padding:2.5rem">
+            <form data-demo="true">
+              <div class="row g-3">
+                <div class="col-sm-6 form-group-ea"><label class="form-label-ea" for="pkgName">Full Name</label><input
+                    type="text" class="form-control-ea" id="pkgName" placeholder="Your full name" required /></div>
+                <div class="col-sm-6 form-group-ea"><label class="form-label-ea" for="pkgEmail">Email</label><input
+                    type="email" class="form-control-ea" id="pkgEmail" placeholder="hello@email.com" required /></div>
+                <div class="col-sm-6 form-group-ea"><label class="form-label-ea" for="pkgDate">Wedding
+                    Date</label><input type="date" class="form-control-ea" id="pkgDate" /></div>
+                <div class="col-sm-6 form-group-ea"><label class="form-label-ea" for="pkgBudget">Approximate
+                    Budget</label>
+                  <select class="form-control-ea" id="pkgBudget">
+                    <option>Under ₹50,000</option>
+                    <option>₹50,000 – ₹1,00,000</option>
+                    <option>₹1,00,000 – ₹2,00,000</option>
+                    <option>Above ₹2,00,000</option>
+                  </select>
+                </div>
+                <div class="col-12 form-group-ea"><label class="form-label-ea">Services Interested In</label>
+                  <div class="row g-2 mt-1">
+                    <div class="col-sm-4"><label
+                        style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;color:var(--clr-text-2);font-size:0.88rem"><input
+                          type="checkbox" style="accent-color:var(--clr-primary)"> Photography</label></div>
+                    <div class="col-sm-4"><label
+                        style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;color:var(--clr-text-2);font-size:0.88rem"><input
+                          type="checkbox" style="accent-color:var(--clr-primary)"> Videography</label></div>
+                    <div class="col-sm-4"><label
+                        style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;color:var(--clr-text-2);font-size:0.88rem"><input
+                          type="checkbox" style="accent-color:var(--clr-primary)"> Pre-Wedding</label></div>
+                    <div class="col-sm-4"><label
+                        style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;color:var(--clr-text-2);font-size:0.88rem"><input
+                          type="checkbox" style="accent-color:var(--clr-primary)"> Drone</label></div>
+                    <div class="col-sm-4"><label
+                        style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;color:var(--clr-text-2);font-size:0.88rem"><input
+                          type="checkbox" style="accent-color:var(--clr-primary)"> Photo Album</label></div>
+                    <div class="col-sm-4"><label
+                        style="display:flex;align-items:center;gap:0.5rem;cursor:pointer;color:var(--clr-text-2);font-size:0.88rem"><input
+                          type="checkbox" style="accent-color:var(--clr-primary)"> Same Day Edit</label></div>
+                  </div>
+                </div>
+                <div class="col-12 form-group-ea"><label class="form-label-ea" for="pkgMsg">Additional
+                    Notes</label><textarea class="form-control-ea" id="pkgMsg" rows="3"
+                    placeholder="Any additional requirements, questions, or special requests..."></textarea></div>
+                <div class="col-12"><button type="submit" class="btn-primary-ea"
+                    style="justify-content:center;width:100%;padding:0.85rem"><i class="bi bi-envelope-heart-fill"></i>
+                    Request Custom Quote</button></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-pad bg-surface">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-8">
+          <div class="accordion accordion-ea" id="faqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse"
+                  data-bs-target="#faq1">How far in advance should I book?</button></h3>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">We recommend booking at least 6 to 12 months in advance, especially for popular dates from December to February and April to June. If your date is closer, still reach out; we may have limited openings or can suggest an adjusted team plan.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse"
+                  data-bs-target="#faq2">Do you travel outside Bengaluru?</button></h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Absolutely. We cover weddings across India and internationally, including destination celebrations in palace venues, beaches, hill stations, and private resorts. Travel, accommodation, permits, and drone permissions are discussed clearly during the enquiry stage.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse"
+                  data-bs-target="#faq3">How long until we receive our photos?</button></h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">You will receive a teaser gallery of 20 to 30 images within 48 hours of your wedding. The full edited gallery is delivered within 3 to 4 weeks, while wedding films take 6 to 8 weeks because they require detailed editing, color grading, audio mixing, and music selection.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse"
+                  data-bs-target="#faq4">What if it rains on our wedding day?</button></h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Rain can add a beautiful cinematic quality to wedding photography. We prepare with weather-sealed equipment, protective covers, alternate portrait locations, lighting solutions, and flexible timing so your coverage continues smoothly even when the weather changes.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse"
+                  data-bs-target="#faq5">Can we create a custom package?</button></h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes. Every wedding is different, so we can customize coverage hours, team size, pre-wedding sessions, drone footage, albums, same-day edits, and film deliverables based on your celebration and budget.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <img src="assets/images/cta-home.jpg" alt="Book EverAfter Studios" class="banner-img"
+      onerror="this.style.display='none'" />
+    <div class="cta-overlay"></div>
+    <div class="cta-content container" data-aos="zoom-in">
+      <span class="script-font d-block mb-2" style="font-size:2rem">Don't Wait</span>
+      <h2 class="cta-title">Your Perfect Date Won't Stay Available</h2>
+      <p class="cta-text">Premium wedding dates are often booked 6 to 12 months in advance. Reach out today with your wedding date and venue so we can confirm availability, recommend the right team, and reserve your celebration with EverAfter Studios.</p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a href="tel:+919876543210" class="btn-primary-ea"><i class="bi bi-telephone-fill"></i> Call +91 98765 43210</a>
+        <a href="https://wa.me/919876543210" class="btn-outline-ea" target="_blank"><i class="bi bi-whatsapp"></i>
+          WhatsApp Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-brand"><a class="footer-brand-link" href="index.html"
+              aria-label="EverAfter Studios home"><img src="assets/images/logo.png" alt="EverAfter Studios"
+                class="footer-brand-logo" onerror="this.style.display='none'" /><span class="footer-brand-text"><span
+                  class="brand-name-footer">EverAfter <span>Studios</span></span><span class="script-sub">Capturing
+                  Forever</span></span></a>
+            <p>Timeless wedding memories through cinematic photography and film.</p>
+            <div class="footer-social"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i
+                  class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-pinterest"></i></a><a href="#"><i
+                  class="bi bi-youtube"></i></a><a href="#"><i class="bi bi-whatsapp"></i></a></div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Photography</a></li>
+            <li><a href="videography.html"><i class="bi bi-chevron-right"></i> Videography</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right"></i> Portfolio</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Bridal Portraits</a></li>
+            <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Couple Shoots</a></li>
+            <li><a href="videography.html"><i class="bi bi-chevron-right"></i> Wedding Films</a></li>
+            <li><a href="videography.html"><i class="bi bi-chevron-right"></i> Drone Coverage</a></li>
+            <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Pre-Wedding</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Contact</h4>
+          <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>42, Rose Garden Lane, Indiranagar,
+              Bengaluru — 560038</span></div>
+          <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><span>+91 98765 43210</span></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span>hello@everafterstudios.in</span>
+          </div>
+          <div class="footer-contact-item"><i class="bi bi-clock-fill"></i><span>Mon–Sat: 10am – 7pm</span></div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p style="font-size:0.86rem;color:var(--clr-footer-text);opacity:0.8;margin-bottom:1rem">Subscribe for wedding
+            inspiration and stories.</p>
+          <form class="newsletter-form" data-demo="true">
+            <div class="input-group-footer"><input type="email" placeholder="Your email address" required /><button
+                type="submit"><i class="bi bi-send-fill"></i> Subscribe</button></div>
+            <p class="footer-note">No spam, ever.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p>&copy; 2026 EverAfter Studios. All rights reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Refund
+                Policy</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn"><i class="bi bi-arrow-up"></i></button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

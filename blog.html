@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <title>Blog — EverAfter Studios | Wedding Photography Stories & Tips</title>
+  <meta name="description" content="The EverAfter Studios blog — behind-the-scenes stories, wedding photography tips, venue inspiration, editing insights, and featured wedding shoots." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="everafter-navbar navbar navbar-expand-xl" id="mainNavbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="EverAfter Studios" class="brand-logo" onerror="this.style.display='none'" /><span class="brand-text"><span class="brand-name">EverAfter <span>Studios</span></span><span class="brand-tagline">Capturing Forever</span></span></a>
+    <div class="d-flex align-items-center gap-2 d-xl-none">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"><span class="navbar-toggler-icon"></span></button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a><ul class="dropdown-menu"><li><a class="dropdown-item" href="index.html">Home 1</a></li><li><a class="dropdown-item" href="home2.html">Home 2</a></li></ul></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="photography.html">Photography</a></li>
+        <li class="nav-item"><a class="nav-link" href="videography.html">Videography</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="blog.html" data-page="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <button class="nav-toggle-btn theme-toggle-btn"><i class="bi bi-moon-stars-fill theme-icon"></i></button>
+        <button class="nav-toggle-btn rtl-toggle-btn"><span class="rtl-icon" aria-hidden="true">RTL</span></button>
+        <a href="login.html" class="btn-nav-login nav-link ms-2"><i class="bi bi-person-circle me-1"></i> Login</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="offcanvas offcanvas-start" id="navbarOffcanvas" tabindex="-1">
+  <div class="offcanvas-header"><a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Logo" class="brand-logo" onerror="this.style.display='none'" /><span class="brand-text"><span class="brand-name">EverAfter <span>Studios</span></span><span class="brand-tagline">Capturing Forever</span></span></a><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button></div>
+  <div class="offcanvas-body d-flex flex-column p-0">
+    <ul class="navbar-nav flex-column">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+        <ul class="dropdown-menu mobile-home-menu">
+          <li><a class="dropdown-item" href="index.html" data-page="index.html">Home 1</a></li>
+          <li><a class="dropdown-item" href="home2.html" data-page="home2.html">Home 2</a></li>
+        </ul>
+      </li><li><a class="nav-link" href="about.html">About</a></li><li><a class="nav-link" href="photography.html">Photography</a></li><li><a class="nav-link" href="videography.html">Videography</a></li><li><a class="nav-link" href="portfolio.html">Portfolio</a></li><li><a class="nav-link active" href="blog.html">Blog</a></li><li><a class="nav-link" href="contact.html">Contact</a></li>
+      <li class="px-3 py-2"><a href="login.html" class="btn-nav-login d-flex align-items-center justify-content-center gap-2 w-100"><i class="bi bi-person-circle"></i> Login</a></li>
+    </ul>
+    <div class="mobile-toggles mt-auto"><button class="nav-toggle-btn theme-toggle-btn"><i class="bi bi-moon-stars-fill theme-icon"></i></button><button class="nav-toggle-btn rtl-toggle-btn"><span class="rtl-icon" aria-hidden="true">RTL</span></button></div>
+  </div>
+</div>
+
+<!-- BANNER -->
+<section class="page-banner" style="min-height:420px">
+  <img src="assets/images/blog-hero.jpg" alt="Blog" class="banner-img" onerror="this.style.display='none'" />
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <div class="container">
+      <div class="banner-card">
+        <div class="breadcrumb-custom"><a href="index.html">Home</a><span>/</span><span>Blog</span></div>
+        <span class="banner-tag">Behind The Lens</span>
+        <h1 class="banner-title">Stories &amp; Insights</h1>
+        <p class="banner-desc">Wedding photography tips, behind-the-scenes moments, venue spotlights, planning advice, editing insights, and the stories behind our most memorable shoots.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED BLOG POST (HERO CARD) -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-label">Behind The Scenes</span>
+      <h2 class="section-title">Featured Story</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="row g-5 align-items-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-6">
+        <div class="img-reveal-wrap">
+          <img src="assets/images/blog_new.jpg" alt="Featured Story" onerror="this.style.background='linear-gradient(135deg,#C9A96E33,#7B2D4233)'" />
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <span class="blog-cat">Behind The Scenes</span>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--clr-text);margin-bottom:1rem;line-height:1.25">How We Captured 850 Weddings — and What Each One Taught Us</h2>
+        <div class="blog-meta" style="margin-bottom:1rem">
+          <span><i class="bi bi-person-fill"></i> Rajan Menon</span>
+          <span><i class="bi bi-calendar3"></i> June 15, 2025</span>
+          <span><i class="bi bi-clock"></i> 8 min read</span>
+        </div>
+        <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.1rem">After documenting over 850 weddings across India, we have learned that the most beautiful photographs are rarely forced. They emerge from trust, preparation, family emotion, cultural rhythm, and the quiet awareness to notice what is happening before it disappears.</p>
+        <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.1rem">Step behind the camera and see how our team prepares, coordinates, and captures the real rhythm of a wedding day.</p>
+        <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.1rem">These stories reveal the planning, patience, lighting decisions, and quiet problem-solving that shape every polished final gallery.</p>
+        <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.5rem">A closer look at the planning, patience, and creative decisions behind our wedding stories.<br class="desktop-break" /> From timeline preparation to emotional candid moments, every detail matters.<br class="desktop-break" /> This featured story shares what years of real weddings have taught our team.</p>
+        <a href="#" class="btn-primary-ea"><i class="bi bi-journal-richtext"></i> Read Full Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEHIND THE SCENES STORIES -->
+<section class="section-pad bg-surface">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-label">Our Stories</span>
+      <h2 class="section-title">Behind The Scenes Stories</h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="row g-4 row-center-last">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="blog-card">
+          <div class="blog-card-img-wrap"><img src="assets/images/blog-01.jpg" alt="BTS Story" onerror="this.style.background='linear-gradient(135deg,#C9A96E,#7B2D42)'" /></div>
+          <div class="blog-card-body">
+            <span class="blog-cat">Behind The Scenes</span>
+            <div class="blog-meta"><span><i class="bi bi-calendar3"></i> May 22, 2025</span><span><i class="bi bi-clock"></i> 5 min</span></div>
+            <h3 class="blog-card-title blog-line-title blog-mobile-three-heading"><span class="blog-title-desktop-line">Inside a 16-Hour Wedding Day</span><span class="blog-title-desktop-line">with Our Team</span><span class="blog-title-mobile-line">Inside a 16-Hour</span><span class="blog-title-mobile-line">Wedding Day</span><span class="blog-title-mobile-line">with Our Team</span></h3>
+            <p class="blog-card-text blog-line-text"><span>From pre-dawn preparation shots</span><span>to the final sparkler exit, this</span><span>story explains how our team plans</span><span>gear, coverage, timelines, and</span><span>stays calm all day.</span></p>
+            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="blog-card">
+          <div class="blog-card-img-wrap"><img src="assets/images/blog-02.jpg" alt="BTS Preparation" onerror="this.style.background='linear-gradient(135deg,#C08080,#C9A96E)'" /></div>
+          <div class="blog-card-body">
+            <span class="blog-cat">Behind The Scenes</span>
+            <div class="blog-meta"><span><i class="bi bi-calendar3"></i> April 10, 2025</span><span><i class="bi bi-clock"></i> 4 min</span></div>
+            <h3 class="blog-card-title blog-line-title blog-mobile-three-heading"><span class="blog-title-desktop-line">The Art of Photographing</span><span class="blog-title-desktop-line">Wedding Preparations</span><span class="blog-title-mobile-line">The Art of</span><span class="blog-title-mobile-line">Photographing Wedding</span><span class="blog-title-mobile-line">Preparations</span></h3>
+            <p class="blog-card-text blog-line-text"><span>Wedding preparation photography</span><span>is an intimate art. We use soft</span><span>direction, minimal interruption,</span><span>and careful light while preserving</span><span>morning emotion.</span></p>
+            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="blog-card">
+          <div class="blog-card-img-wrap"><img src="assets/images/blog-03.jpg" alt="Night Photography" onerror="this.style.background='linear-gradient(135deg,#7B2D42,#C08080)'" /></div>
+          <div class="blog-card-body">
+            <span class="blog-cat">Behind The Scenes</span>
+            <div class="blog-meta"><span><i class="bi bi-calendar3"></i> March 5, 2025</span><span><i class="bi bi-clock"></i> 6 min</span></div>
+            <h3 class="blog-card-title blog-line-title blog-mobile-three-heading"><span class="blog-title-desktop-line">Night Reception Photography:</span><span class="blog-title-desktop-line">Mastering Low Light</span><span class="blog-title-mobile-line">Night Reception</span><span class="blog-title-mobile-line">Photography: Mastering</span><span class="blog-title-mobile-line">Low Light</span></h3>
+            <p class="blog-card-text blog-line-text"><span>Reception photography after dark</span><span>is technically demanding. Lighting</span><span>placement, camera settings, lens</span><span>choice, and anticipation create</span><span>warm cinematic images.</span></p>
+            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOGRAPHY TIPS -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-label">Expert Advice</span>
+      <h2 class="section-title">Wedding Photography Tips</h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">Practical advice for couples planning their wedding photography, built from 12 years of timelines, venues, cultural ceremonies, family portraits, and real wedding-day problem solving.</p>
+    </div>
+    <div class="row g-4 row-center-last">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="blog-card">
+          <div class="blog-card-img-wrap"><img src="assets/images/blog-04.jpg" alt="Tip 1" onerror="this.style.background='linear-gradient(135deg,#A8894E,#C9A96E)'" /></div>
+          <div class="blog-card-body">
+            <span class="blog-cat">Tips</span>
+            <div class="blog-meta"><span><i class="bi bi-calendar3"></i> Feb 18, 2025</span><span><i class="bi bi-clock"></i> 7 min</span></div>
+            <h3 class="blog-card-title blog-line-title"><span>10 Questions to Ask Your</span><span>Wedding Photographer</span><span>Before Booking</span></h3>
+            <p class="blog-card-text blog-line-text"><span>Choosing the right photographer</span><span>is one of the most important</span><span>planning decisions. These questions</span><span>reveal experience, backups, editing,</span><span>delivery, and pressure handling.</span></p>
+            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="blog-card">
+          <div class="blog-card-img-wrap"><img src="assets/images/blog-05.jpg" alt="Tip 2" onerror="this.style.background='linear-gradient(135deg,#7B2D42,#A8894E)'" /></div>
+          <div class="blog-card-body">
+            <span class="blog-cat">Tips</span>
+            <div class="blog-meta"><span><i class="bi bi-calendar3"></i> Jan 30, 2025</span><span><i class="bi bi-clock"></i> 5 min</span></div>
+            <h3 class="blog-card-title blog-line-title"><span>Golden Hour Weddings:</span><span>Why Timing Is</span><span>Everything</span></h3>
+            <p class="blog-card-text blog-line-text"><span>The hour before sunset creates</span><span>warm, flattering light for portraits</span><span>and candids. We explain timing,</span><span>travel buffers, and couple sessions</span><span>to make the most of it.</span></p>
+            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="blog-card">
+          <div class="blog-card-img-wrap"><img src="assets/images/blog-06.jpg" alt="Tip 3" onerror="this.style.background='linear-gradient(135deg,#C9A96E,#C08080)'" /></div>
+          <div class="blog-card-body">
+            <span class="blog-cat">Tips</span>
+            <div class="blog-meta"><span><i class="bi bi-calendar3"></i> Dec 12, 2024</span><span><i class="bi bi-clock"></i> 6 min</span></div>
+            <h3 class="blog-card-title blog-line-title"><span>Creating a Photography</span><span>Timeline for Your</span><span>Wedding Day</span></h3>
+            <p class="blog-card-text blog-line-text"><span>A strong timeline gives your</span><span>photographer the light, breathing</span><span>room, and access needed for</span><span>meaningful images that work for</span><span>families, planners, and artists.</span></p>
+            <a href="#" class="blog-read-more">Read More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE INSPIRATION -->
+<section class="section-pad bg-surface">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-label">Locations</span>
+      <h2 class="section-title">Venue Inspiration</h2>
+      <div class="gold-divider"></div>
+      <p class="section-subtitle">The right venue sets the stage for extraordinary photography. Discover how palaces, gardens, beaches, and ballrooms influence light, movement, decor, guest flow, and final image style.</p>
+    </div>
+    <div class="row g-4 row-center-last">
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+        <div style="position:relative;border-radius:16px;overflow:hidden;height:280px">
+          <img src="assets/images/gallery-01.jpg" alt="Palace Venue" style="width:100%;height:100%;object-fit:cover" onerror="this.style.background='linear-gradient(135deg,#C9A96E,#7B2D42)'" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,12,8,0.85) 100%);display:flex;align-items:flex-end;padding:1rem">
+            <div style="color:#fff"><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.05rem">Heritage Palaces</div><div style="font-size:0.75rem;opacity:0.8">Mysore, Rajasthan</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+        <div style="position:relative;border-radius:16px;overflow:hidden;height:280px">
+          <img src="assets/images/home1-hero.jpg" alt="Garden Venue" style="width:100%;height:100%;object-fit:cover" onerror="this.style.background='linear-gradient(135deg,#A8894E,#C9A96E)'" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,12,8,0.85) 100%);display:flex;align-items:flex-end;padding:1rem">
+            <div style="color:#fff"><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.05rem">Garden Estates</div><div style="font-size:0.75rem;opacity:0.8">Bengaluru, Coorg</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+        <div style="position:relative;border-radius:16px;overflow:hidden;height:280px">
+          <img src="assets/images/story-beach.jpg" alt="Beach Venue" style="width:100%;height:100%;object-fit:cover" onerror="this.style.background='linear-gradient(135deg,#C08080,#7B2D42)'" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,12,8,0.85) 100%);display:flex;align-items:flex-end;padding:1rem">
+            <div style="color:#fff"><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.05rem">Beach Resorts</div><div style="font-size:0.75rem;opacity:0.8">Goa, Kerala</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+        <div style="position:relative;border-radius:16px;overflow:hidden;height:280px">
+          <img src="assets/images/gallery-03.jpg" alt="Ballroom Venue" style="width:100%;height:100%;object-fit:cover" onerror="this.style.background='linear-gradient(135deg,#7B2D42,#C9A96E)'" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,12,8,0.85) 100%);display:flex;align-items:flex-end;padding:1rem">
+            <div style="color:#fff"><div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.05rem">Grand Ballrooms</div><div style="font-size:0.75rem;opacity:0.8">Mumbai, Delhi</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDITING WORKFLOW -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1100">
+        <span class="section-label">Post-Production</span>
+        <h2 class="section-title text-start">Our Editing Workflow</h2>
+        <div class="gold-divider" style="margin:0 0 1.5rem"></div>
+        <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.25rem">Great wedding photography doesn't end when the shutter clicks. The editing process is where images are transformed into art — with careful colour grading, retouching, and finishing that preserves the warmth and emotion of the moment.</p>
+        <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.25rem">We use professional-grade software and spend an average of 15 minutes per image to ensure each photograph meets our exacting standards of beauty and storytelling.</p>
+        <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:2rem">Every gallery is reviewed for color consistency, skin tone accuracy, and emotional flow before delivery. This careful process helps the final collection feel polished, cohesive, and true to the atmosphere of the wedding day.</p>
+        <div class="row g-2">
+          <div class="col-6"><div class="d-flex gap-2"><i class="bi bi-check-circle-fill" style="color:var(--clr-primary)"></i><span style="color:var(--clr-text-2);font-size:0.88rem">Lightroom Classic</span></div></div>
+          <div class="col-6"><div class="d-flex gap-2"><i class="bi bi-check-circle-fill" style="color:var(--clr-primary)"></i><span style="color:var(--clr-text-2);font-size:0.88rem">Adobe Photoshop</span></div></div>
+          <div class="col-6"><div class="d-flex gap-2"><i class="bi bi-check-circle-fill" style="color:var(--clr-primary)"></i><span style="color:var(--clr-text-2);font-size:0.88rem">DaVinci Resolve</span></div></div>
+          <div class="col-6"><div class="d-flex gap-2"><i class="bi bi-check-circle-fill" style="color:var(--clr-primary)"></i><span style="color:var(--clr-text-2);font-size:0.88rem">Custom LUT Profiles</span></div></div>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1100">
+        <div class="img-reveal-wrap">
+          <img src="assets/images/gallery-14.jpg" alt="Editing Workflow" onerror="this.style.background='linear-gradient(135deg,#C9A96E33,#7B2D4233)'" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <img src="assets/images/cta-blog.jpg" alt="Blog CTA" class="banner-img" onerror="this.style.display='none'" />
+  <div class="cta-overlay"></div>
+  <div class="cta-content container" data-aos="zoom-in">
+    <span class="script-font d-block mb-2" style="font-size:2rem">Stay Inspired</span>
+    <h2 class="cta-title">Subscribe to Our Wedding Stories Blog</h2>
+    <p class="cta-text">Get monthly wedding photography tips, timeline guidance, behind-the-scenes stories, venue inspiration, and planning ideas delivered to your inbox before your big day.</p>
+    <div class="d-flex flex-wrap gap-3 justify-content-center">
+      <a href="contact.html" class="btn-primary-ea"><i class="bi bi-envelope-fill"></i> Subscribe Now</a>
+      <a href="portfolio.html" class="btn-outline-ea"><i class="bi bi-images"></i> View Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6"><div class="footer-brand"><a class="footer-brand-link" href="index.html" aria-label="EverAfter Studios home"><img src="assets/images/logo.png" alt="EverAfter Studios" class="footer-brand-logo" onerror="this.style.display='none'" /><span class="footer-brand-text"><span class="brand-name-footer">EverAfter <span>Studios</span></span><span class="script-sub">Capturing Forever</span></span></a><p>Timeless wedding memories through cinematic photography and film.</p><div class="footer-social"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-pinterest"></i></a><a href="#"><i class="bi bi-youtube"></i></a><a href="#"><i class="bi bi-whatsapp"></i></a></div></div></div>
+      <div class="col-lg-2 col-md-6"><h4 class="footer-heading">Quick Links</h4><ul class="footer-links"><li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li><li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li><li><a href="photography.html"><i class="bi bi-chevron-right"></i> Photography</a></li><li><a href="videography.html"><i class="bi bi-chevron-right"></i> Videography</a></li><li><a href="portfolio.html"><i class="bi bi-chevron-right"></i> Portfolio</a></li><li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li><li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li></ul></div>
+      <div class="col-lg-2 col-md-6"><h4 class="footer-heading">Services</h4><ul class="footer-links"><li><a href="photography.html"><i class="bi bi-chevron-right"></i> Bridal Portraits</a></li><li><a href="photography.html"><i class="bi bi-chevron-right"></i> Couple Shoots</a></li><li><a href="videography.html"><i class="bi bi-chevron-right"></i> Wedding Films</a></li><li><a href="videography.html"><i class="bi bi-chevron-right"></i> Drone Coverage</a></li><li><a href="photography.html"><i class="bi bi-chevron-right"></i> Pre-Wedding</a></li></ul></div>
+      <div class="col-lg-2 col-md-6"><h4 class="footer-heading">Contact</h4><div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>42, Rose Garden Lane, Indiranagar, Bengaluru</span></div><div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><span>+91 98765 43210</span></div><div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span>hello@everafterstudios.in</span></div></div>
+      <div class="col-lg-3 col-md-6"><h4 class="footer-heading">Newsletter</h4><p style="font-size:0.86rem;color:var(--clr-footer-text);opacity:0.8;margin-bottom:1rem">Subscribe for wedding inspiration and stories.</p><form class="newsletter-form" data-demo="true"><div class="input-group-footer"><input type="email" placeholder="Your email address" required /><button type="submit"><i class="bi bi-send-fill"></i> Subscribe</button></div><p class="footer-note">No spam, ever.</p></form></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container"><div class="row align-items-center"><div class="col-md-6"><p>&copy; 2026 EverAfter Studios. All rights reserved.</p></div><div class="col-md-6"><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div></div></div>
+</footer>
+
+<div class="lightbox-overlay" id="lightbox-overlay"><div class="lightbox-inner"><button class="lightbox-close" id="lightbox-close"><i class="bi bi-x-lg"></i></button><button class="lightbox-nav lightbox-prev" id="lightbox-prev"><i class="bi bi-chevron-left"></i></button><img id="lightbox-img" src="" alt="Gallery" /><button class="lightbox-nav lightbox-next" id="lightbox-next"><i class="bi bi-chevron-right"></i></button></div></div>
+<button class="scroll-top-btn"><i class="bi bi-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

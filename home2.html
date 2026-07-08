@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <title>Home 2 — EverAfter Studios | Cinematic Wedding Photography</title>
+  <meta name="description"
+    content="Discover EverAfter Studios' alternative cinematic homepage — featuring signature photography style, wedding film highlights, featured couples, and booking CTA." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Home 2 specific: split hero */
+    .hero2-section {
+      min-height: clamp(560px, 72vh, 680px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.28);
+    }
+
+    .hero2-left {
+      background: var(--clr-surface);
+      display: flex;
+      align-items: flex-start;
+      padding: 56px 60px 64px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero2-content {
+      width: 100%;
+      max-width: 520px;
+      margin-top: clamp(18px, 4vh, 42px);
+    }
+
+    .hero2-right {
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+    }
+
+    .hero2-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero2-right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, var(--clr-surface) 0%, transparent 40%);
+      z-index: 1;
+    }
+
+    @media (max-width: 991px) {
+      .hero2-section {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+      }
+
+      .hero2-left {
+        padding: 42px 30px 52px;
+        min-height: auto;
+      }
+
+      .hero2-content {
+        margin-top: 0;
+      }
+
+      .hero2-right {
+        min-height: 360px;
+      }
+
+      .hero2-right::after {
+        background: linear-gradient(180deg, transparent 60%, var(--clr-surface) 100%);
+      }
+    }
+
+    @media (max-width: 575px) {
+      .hero2-left {
+        padding: 42px 20px 52px;
+      }
+
+      .hero2-right {
+        min-height: 320px;
+      }
+    }
+
+    .home2-aesthetic-section {
+      position: relative;
+      background:
+        linear-gradient(180deg, var(--clr-bg) 0%, var(--clr-surface) 42%, var(--clr-surface) 100%);
+      border-top: 1px solid rgba(201, 169, 110, 0.3);
+      box-shadow: inset 0 18px 34px rgba(201, 169, 110, 0.08);
+    }
+
+    .home2-aesthetic-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, var(--clr-primary), transparent);
+      opacity: 0.8;
+    }
+
+    [data-theme="dark"] .home2-aesthetic-section {
+      background:
+        linear-gradient(180deg, var(--clr-bg) 0%, var(--clr-surface-2) 45%, var(--clr-surface) 100%);
+      border-top-color: rgba(212, 180, 131, 0.32);
+      box-shadow: inset 0 18px 36px rgba(0, 0, 0, 0.28);
+    }
+
+    .film-reel {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+
+    .film-reel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .film-reel-item {
+      flex-shrink: 0;
+      width: 120px;
+      height: 80px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid var(--clr-border);
+      transition: var(--transition);
+    }
+
+    .film-reel-item:hover {
+      border-color: var(--clr-primary);
+      transform: scale(1.05);
+    }
+
+    .film-reel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .film-reel-fallback {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--clr-primary);
+    }
+
+    .aesthetic-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 20px;
+      align-items: stretch;
+      padding: 0.5rem 0;
+    }
+
+    .aesthetic-gallery .col-6 {
+      width: auto;
+      max-width: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .aesthetic-shot {
+      height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .aesthetic-shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mini-feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--clr-surface-2);
+      border: 1.5px solid var(--clr-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--clr-primary);
+      flex-shrink: 0;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .mini-feature-icon i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .d-flex:hover>.mini-feature-icon {
+      background: var(--clr-primary);
+      color: var(--clr-white);
+      border-color: var(--clr-primary);
+    }
+
+    @media (max-width: 991px) {
+      .aesthetic-gallery {
+        margin-top: 1.5rem;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .aesthetic-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .aesthetic-shot {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════════ -->
+  <nav class="everafter-navbar navbar navbar-expand-xl" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt="EverAfter Studios" class="brand-logo"
+          onerror="this.style.display='none'" />
+        <span class="brand-text"><span class="brand-name">EverAfter <span>Studios</span></span><span
+            class="brand-tagline">Capturing Forever</span></span>
+      </a>
+      <div class="d-flex align-items-center gap-2 d-xl-none">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
+          aria-label="Open menu"><span class="navbar-toggler-icon"></span></button>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Home</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+              <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html" data-page="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="photography.html" data-page="photography.html">Photography</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="videography.html" data-page="videography.html">Videography</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html" data-page="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html" data-page="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html" data-page="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <button class="nav-toggle-btn theme-toggle-btn" aria-label="Toggle theme"><i
+              class="bi bi-moon-stars-fill theme-icon"></i></button>
+          <button class="nav-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL"><span class="rtl-icon"
+              aria-hidden="true">RTL</span></button>
+          <a href="login.html" class="btn-nav-login nav-link ms-2"><i class="bi bi-person-circle me-1"></i> Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="offcanvas offcanvas-start" id="navbarOffcanvas" tabindex="-1">
+    <div class="offcanvas-header">
+      <a href="index.html" class="navbar-brand"><img src="assets/images/logo.png" alt="Logo" class="brand-logo"
+          onerror="this.style.display='none'" /><span class="brand-text"><span class="brand-name">EverAfter
+            <span>Studios</span></span><span class="brand-tagline">Capturing Forever</span></span></a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column p-0">
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">Home</a>
+          <ul class="dropdown-menu mobile-home-menu">
+            <li><a class="dropdown-item" href="index.html" data-page="index.html">Home 1</a></li>
+            <li><a class="dropdown-item active" href="home2.html" data-page="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="photography.html">Photography</a></li>
+        <li class="nav-item"><a class="nav-link" href="videography.html">Videography</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item px-3 py-2"><a href="login.html"
+            class="btn-nav-login d-inline-flex align-items-center gap-2 w-100 justify-content-center"><i
+              class="bi bi-person-circle"></i> Login</a></li>
+      </ul>
+      <div class="mobile-toggles mt-auto">
+        <button class="nav-toggle-btn theme-toggle-btn"><i class="bi bi-moon-stars-fill theme-icon"></i></button>
+
+        <button class="nav-toggle-btn rtl-toggle-btn"><span class="rtl-icon" aria-hidden="true">RTL</span></button>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero2-section">
+    <div class="hero2-left" data-aos="fade-right" data-aos-duration="1100">
+      <div class="hero2-content">
+        <span class="section-label" style="font-size:2rem">Where Every Frame</span>
+        <h1 class="section-title text-start" style="font-size:clamp(2.2rem,4vw,3.8rem);margin-bottom:1rem">Is a
+          Masterpiece</h1>
+        <div class="gold-divider" style="margin:0 0 1.5rem"></div>
+        <p style="color:var(--clr-muted);font-size:1rem;max-width:440px;line-height:1.75;margin-bottom:2rem">We create
+          heirloom-quality wedding photography and cinematic films that preserve the atmosphere, rituals, details, and
+          emotions of your celebration. Art meets intention in every frame.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="portfolio.html" class="btn-primary-ea"><i class="bi bi-play-circle-fill"></i> Watch Our Films</a>
+          <a href="contact.html" class="btn-outline-gold"><i class="bi bi-calendar-heart"></i> Book a Date</a>
+        </div>
+        <!-- Film reel strip -->
+        <div class="film-reel mt-4">
+          <div class="film-reel-item"><img src="assets/images/gallery-01.jpg" alt="s1"
+              onerror="this.parentNode.innerHTML='<div class=film-reel-fallback><i class=bi bi-image></i></div>'" />
+          </div>
+          <div class="film-reel-item"><img src="assets/images/gallery-02.jpg" alt="s2"
+              onerror="this.parentNode.innerHTML='<div class=film-reel-fallback><i class=bi bi-image></i></div>'" />
+          </div>
+          <div class="film-reel-item"><img src="assets/images/cta-videography.jpg" alt="s3"
+              onerror="this.parentNode.innerHTML='<div class=film-reel-fallback><i class=bi bi-image></i></div>'" />
+          </div>
+          <div class="film-reel-item"><img src="assets/images/gallery-04.jpg" alt="s4"
+              onerror="this.parentNode.innerHTML='<div class=film-reel-fallback><i class=bi bi-image></i></div>'" />
+          </div>
+          <div class="film-reel-item"><img src="assets/images/gallery-05.jpg" alt="s5"
+              onerror="this.parentNode.innerHTML='<div class=film-reel-fallback><i class=bi bi-image></i></div>'" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero2-right" data-aos="fade-left" data-aos-duration="1100">
+      <img src="assets/images/home2-hero.jpg" alt="Cinematic Wedding Photography"
+        onerror="this.style.background='linear-gradient(135deg,#C9A96E,#7B2D42)'" />
+    </div>
+  </section>
+
+  <!-- ══════════════════ SIGNATURE STYLE ═══════════════════ -->
+  <section class="section-pad home2-aesthetic-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <span class="section-label">Our Aesthetic</span>
+          <h2 class="section-title text-start">A Signature Photography Style</h2>
+          <div class="gold-divider" style="margin:0 0 1.5rem"></div>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.25rem">Our style blends fine art portraiture
+            with documentary storytelling. Every image is crafted with deliberate intent: the light, the composition,
+            the background, the expression, and the decisive moment.</p>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:2rem">We believe wedding photography should
+            feel timeless, not trendy. Our images are warm, luminous, and deeply human, with editing that respects
+            natural skin tones, fabrics, decor, and ceremony colors.</p>
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-3">
+                <div class="mini-feature-icon"><i class="bi bi-palette-fill"></i></div>
+                <span
+                  style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1rem;color:var(--clr-text)">Fine
+                  Art Portraits</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-3">
+                <div class="mini-feature-icon"><i class="bi bi-eye-fill"></i></div>
+                <span
+                  style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1rem;color:var(--clr-text)">Documentary
+                  Style</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-3">
+                <div class="mini-feature-icon"><i class="bi bi-sun-fill"></i></div>
+                <span
+                  style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1rem;color:var(--clr-text)">Golden
+                  Hour Magic</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-3">
+                <div class="mini-feature-icon"><i class="bi bi-film"></i></div>
+                <span
+                  style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1rem;color:var(--clr-text)">Cinematic
+                  Editing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="row g-3 aesthetic-gallery">
+            <div class="col-6">
+              <div class="gallery-item aesthetic-shot">
+                <img src="assets/images/gallery-04.jpg" alt="Style 1"
+                  onerror="this.style.background='linear-gradient(135deg,#C9A96E,#7B2D42)'" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="gallery-item aesthetic-shot">
+                <img src="assets/images/gallery-05.jpg" alt="Style 2"
+                  onerror="this.style.background='linear-gradient(135deg,#C08080,#C9A96E)'" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="gallery-item aesthetic-shot">
+                <img src="assets/images/cta-videography.jpg" alt="Style 3"
+                  onerror="this.style.background='linear-gradient(135deg,#7B2D42,#C08080)'" />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="gallery-item aesthetic-shot">
+                <img src="assets/images//gallery-06.jpg" alt="Style 4"
+                  onerror="this.style.background='linear-gradient(135deg,#A8894E,#7B2D42)'" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ WEDDING FILM HIGHLIGHTS ══════════════ -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Cinematic Films</span>
+        <h2 class="section-title">Wedding Film Highlights</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">More than a recording, our wedding films combine movement, voices, rituals, music,
+          and atmosphere into a cinematic experience that brings your love story to life on screen.</p>
+      </div>
+      <div class="row g-4 row-center-last">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="video-preview">
+            <img src="assets/images/gallery-01.jpg" alt="Wedding Film 1"
+              onerror="this.style.background='linear-gradient(135deg,#C9A96E,#7B2D42)';this.alt=''" />
+            <div class="video-overlay">
+              <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+          </div>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-top:1rem;color:var(--clr-text)">
+            Ananya &amp; Rohan — Garden Romance</h4>
+          <p style="font-size:0.85rem;color:var(--clr-muted)">10-minute feature film &bull; Bengaluru Estate</p>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="video-preview">
+            <img src="assets/images/gallery-03.jpg" alt="Wedding Film 2"
+              onerror="this.style.background='linear-gradient(135deg,#7B2D42,#C9A96E)';this.alt=''" />
+            <div class="video-overlay">
+              <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+          </div>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-top:1rem;color:var(--clr-text)">
+            Priya &amp; Arjun — Palace Chronicles</h4>
+          <p style="font-size:0.85rem;color:var(--clr-muted)">15-minute feature film &bull; Mysore Palace</p>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="video-preview">
+            <img src="assets/images/gallery-04.jpg" alt="Wedding Film 3"
+              onerror="this.style.background='linear-gradient(135deg,#C08080,#7B2D42)';this.alt=''" />
+            <div class="video-overlay">
+              <div class="play-btn"><i class="bi bi-play-fill"></i></div>
+            </div>
+          </div>
+          <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-top:1rem;color:var(--clr-text)">
+            Meera &amp; Vikram — Coastal Dreams</h4>
+          <p style="font-size:0.85rem;color:var(--clr-muted)">12-minute feature film &bull; Goa Beach Resort</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FEATURED COUPLES ═════════════════════ -->
+  <section class="section-pad bg-surface">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Our Couples</span>
+        <h2 class="section-title">Featured Couples</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="row g-4 row-center-last">
+        <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div style="position:relative;border-radius:16px;overflow:hidden;height:320px">
+            <img src="assets/images/gallery-01.jpg" alt="Couple 1" style="width:100%;height:100%;object-fit:cover"
+              onerror="this.style.background='linear-gradient(135deg,#C9A96E,#7B2D42)'" />
+            <div
+              style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,12,8,0.85) 100%);display:flex;align-items:flex-end;padding:1.25rem">
+              <div style="color:#fff">
+                <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.1rem">Ananya &amp; Rohan
+                </div>
+                <div style="font-size:0.78rem;opacity:0.8">Garden Wedding &bull; March 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div style="position:relative;border-radius:16px;overflow:hidden;height:320px">
+            <img src="assets/images/gallery-02.jpg" alt="Couple 2" style="width:100%;height:100%;object-fit:cover"
+              onerror="this.style.background='linear-gradient(135deg,#C08080,#C9A96E)'" />
+            <div
+              style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,12,8,0.85) 100%);display:flex;align-items:flex-end;padding:1.25rem">
+              <div style="color:#fff">
+                <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.1rem">Priya &amp; Arjun
+                </div>
+                <div style="font-size:0.78rem;opacity:0.8">Heritage Wedding &bull; Jan 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <div style="position:relative;border-radius:16px;overflow:hidden;height:320px">
+            <img src="assets/images/gallery-04.jpg" alt="Couple 3" style="width:100%;height:100%;object-fit:cover"
+              onerror="this.style.background='linear-gradient(135deg,#7B2D42,#C08080)'" />
+            <div
+              style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,12,8,0.85) 100%);display:flex;align-items:flex-end;padding:1.25rem">
+              <div style="color:#fff">
+                <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.1rem">Meera &amp; Vikram
+                </div>
+                <div style="font-size:0.78rem;opacity:0.8">Beach Wedding &bull; Dec 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+          <div style="position:relative;border-radius:16px;overflow:hidden;height:320px">
+            <img src="assets/images/gallery-05.jpg" alt="Couple 4" style="width:100%;height:100%;object-fit:cover"
+              onerror="this.style.background='linear-gradient(135deg,#A8894E,#7B2D42)'" />
+            <div
+              style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(20,12,8,0.85) 100%);display:flex;align-items:flex-end;padding:1.25rem">
+              <div style="color:#fff">
+                <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.1rem">Kavya &amp;
+                  Siddharth</div>
+                <div style="font-size:0.78rem;opacity:0.8">Traditional Wedding &bull; Nov 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ BEHIND THE SCENES ═════════════════════ -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="img-reveal-wrap">
+            <img src="assets/images/gallery-13.jpg" alt="Behind The Scenes"
+              onerror="this.style.background='linear-gradient(135deg,#C9A96E33,#7B2D4233)'" />
+            <div class="img-badge">
+              <div class="badge-num">BTS</div>
+              <div class="badge-lbl">Behind The Scenes</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <span class="section-label">Behind The Lens</span>
+          <h2 class="section-title text-start">The BTS Experience</h2>
+          <div class="gold-divider" style="margin:0 0 1.5rem"></div>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.25rem">Great wedding photography isn't just
+            about the final image — it's about the creative process, the collaboration, and the moments in between.</p>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.25rem">Our blog takes you inside the world of
+            professional wedding photography — from venue scouting to the final edit.</p>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:1.25rem">You will see how we plan timelines,
+            manage lighting challenges, and capture candid moments without interrupting the celebration. These
+            behind-the-scenes stories reveal the care and craft that shape every finished gallery. They also help
+            couples understand what to expect from a calm, well-prepared creative team.</p>
+          <p style="color:var(--clr-muted);line-height:1.8;margin-bottom:2rem">We also share how our photographers coordinate with planners, families, and venue teams during real wedding days. It gives couples a clearer look at the teamwork behind effortless, emotional coverage.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="blog.html" class="btn-primary-ea"><i class="bi bi-journal-richtext"></i> Read Our Blog</a>
+            <a href="about.html" class="btn-outline-gold"><i class="bi bi-people-fill"></i> Meet the Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PACKAGE PREVIEW ════════════════════════ -->
+  <section class="section-pad bg-surface">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Packages</span>
+        <h2 class="section-title">Photography &amp; Film Packages</h2>
+        <div class="gold-divider"></div>
+        <p class="section-subtitle">From intimate ceremonies to grand destination weddings, we have flexible packages
+          designed around your guest count, rituals, venue, travel plans, and preferred deliverables.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="package-card h-100 text-center">
+            <div class="package-icon"><i class="bi bi-camera2"></i></div>
+            <div class="package-name">Photography Only</div>
+            <div class="package-price"><sup>&#8377;</sup>45,000</div>
+            <p class="package-desc">8 to 10 hours of photography coverage, 300+ edited images, online gallery access,
+              and focused documentation for intimate wedding-day celebrations.</p>
+            <a href="contact.html" class="btn-outline-gold mt-auto">Enquire</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="package-card featured h-100 text-center">
+            <span class="package-badge">Best Value</span>
+            <div class="package-icon"><i class="bi bi-camera-video-fill"></i></div>
+            <div class="package-name">Photo + Film Combo</div>
+            <div class="package-price"><sup>&#8377;</sup>85,000</div>
+            <p class="package-desc">Complete photo and video coverage with a cinematic wedding film, premium album,
+              highlight moments, and a stronger team for full-day storytelling.</p>
+            <a href="contact.html" class="btn-primary-ea mt-auto">Enquire</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="package-card h-100 text-center">
+            <div class="package-icon"><i class="bi bi-stars"></i></div>
+            <div class="package-name">Luxury Destination</div>
+            <div class="package-price"><sup>&#8377;</sup>1,50,000</div>
+            <p class="package-desc">Multi-day coverage with drone footage, feature film, luxury photo book, expanded
+              team support, and planning for destination or large-scale weddings.</p>
+            <a href="contact.html" class="btn-outline-gold mt-auto">Enquire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ BOOKING CTA ════════════════════════════ -->
+  <section class="cta-section">
+    <img src="assets/images/cta-home.jpg" alt="Book EverAfter Studios" class="banner-img"
+      onerror="this.style.display='none'" />
+    <div class="cta-overlay"></div>
+    <div class="cta-content container" data-aos="zoom-in" data-aos-duration="1000">
+      <span class="script-font d-block mb-2" style="font-size:2rem">Your Story Awaits</span>
+      <h2 class="cta-title">Ready to Create Something Beautiful?</h2>
+      <p class="cta-text">Limited dates are available because we work with a select number of couples each season. This
+        allows our team to plan carefully, stay creatively focused, and give every wedding our full artistic attention.
+      </p>
+      <div class="d-flex flex-wrap gap-3 justify-content-center">
+        <a href="contact.html" class="btn-primary-ea"><i class="bi bi-envelope-heart-fill"></i> Start the
+          Conversation</a>
+        <a href="portfolio.html" class="btn-outline-ea"><i class="bi bi-images"></i> View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (same as index.html) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-brand">
+            <a class="footer-brand-link" href="index.html" aria-label="EverAfter Studios home"><img
+                src="assets/images/logo.png" alt="EverAfter Studios" class="footer-brand-logo"
+                onerror="this.style.display='none'" /><span class="footer-brand-text"><span
+                  class="brand-name-footer">EverAfter <span>Studios</span></span><span class="script-sub">Capturing
+                  Forever</span></span></a>
+            <p>We are dedicated to creating timeless wedding memories through the art of cinematic photography and film.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Photography</a></li>
+            <li><a href="videography.html"><i class="bi bi-chevron-right"></i> Videography</a></li>
+            <li><a href="portfolio.html"><i class="bi bi-chevron-right"></i> Portfolio</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Bridal Portraits</a></li>
+            <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Couple Shoots</a></li>
+            <li><a href="videography.html"><i class="bi bi-chevron-right"></i> Wedding Films</a></li>
+            <li><a href="videography.html"><i class="bi bi-chevron-right"></i> Drone Coverage</a></li>
+            <li><a href="photography.html"><i class="bi bi-chevron-right"></i> Pre-Wedding Shoots</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Custom Packages</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Contact</h4>
+          <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><span>42, Rose Garden Lane, Indiranagar,
+              Bengaluru — 560038</span></div>
+          <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><span>+91 98765 43210</span></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope-fill"></i><span>hello@everafterstudios.in</span>
+          </div>
+          <div class="footer-contact-item"><i class="bi bi-clock-fill"></i><span>Mon–Sat: 10am – 7pm</span></div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Newsletter</h4>
+          <p style="font-size:0.86rem;color:var(--clr-footer-text);opacity:0.8;margin-bottom:1rem">Subscribe for wedding
+            inspiration and behind-the-scenes stories.</p>
+          <form class="newsletter-form" data-demo="true">
+            <div class="input-group-footer">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit"><i class="bi bi-send-fill"></i> Subscribe</button>
+            </div>
+            <p class="footer-note">No spam, ever. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p>&copy; 2026 EverAfter Studios. All rights reserved. Crafted with <i
+                class="bi bi-heart-fill text-danger"></i> in Bengaluru.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a
+                href="#">Refund Policy</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightbox-close"><i class="bi bi-x-lg"></i></button>
+      <button class="lightbox-nav lightbox-prev" id="lightbox-prev"><i class="bi bi-chevron-left"></i></button>
+      <img id="lightbox-img" src="" alt="Gallery" />
+      <button class="lightbox-nav lightbox-next" id="lightbox-next"><i class="bi bi-chevron-right"></i></button>
+    </div>
+  </div>
+  <button class="scroll-top-btn" aria-label="Scroll to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

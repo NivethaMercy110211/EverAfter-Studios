@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <title>Sign Up — EverAfter Studios | Create Your Client Account</title>
+  <meta name="description" content="Create your EverAfter Studios client account to access your private wedding gallery, booking management, and exclusive content." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body { margin: 0; }
+    .auth-page { padding: 2rem 0; }
+    .auth-container { max-width: 520px; }
+  </style>
+</head>
+<body>
+
+<!-- Top-right controls -->
+<div class="auth-controls">
+  <button class="auth-toggle-btn theme-toggle-btn" aria-label="Toggle theme"><i class="bi bi-moon-stars-fill theme-icon"></i></button>
+  <button class="auth-toggle-btn rtl-toggle-btn" aria-label="Toggle RTL"><span class="rtl-icon" aria-hidden="true">RTL</span></button>
+</div>
+
+<!-- Background -->
+<img src="assets/images/signup-bg.jpg" alt="" class="auth-bg" onerror="this.style.display='none'" />
+<div class="auth-overlay" style="background:linear-gradient(135deg, rgba(20,12,8,0.7), rgba(192,128,128,0.4))"></div>
+
+<!-- Auth Page -->
+<div class="auth-page">
+  <div class="auth-container">
+    <div class="auth-card">
+      <!-- Logo -->
+      <div class="auth-logo">
+        <a class="auth-logo-link" href="index.html" aria-label="EverAfter Studios home">
+          <img src="assets/images/logo.png" alt="EverAfter Studios" onerror="this.style.display='none'" />
+          <span class="auth-brand-text"><span class="auth-brand">EverAfter <span>Studios</span></span><span class="auth-script">Capturing Forever</span></span>
+        </a>
+      </div>
+
+      <h1 class="auth-title">Create Account</h1>
+      <p class="auth-subtitle">Join the EverAfter family and access your private wedding gallery and booking portal.</p>
+
+      <!-- Signup Form -->
+      <form class="auth-form" data-demo="true" id="signupForm">
+        <div class="row g-2">
+          <div class="col-6 form-group">
+            <label for="signupFirstName">First Name</label>
+            <input type="text" class="form-control" id="signupFirstName" placeholder="First name" required autocomplete="given-name" />
+          </div>
+          <div class="col-6 form-group">
+            <label for="signupLastName">Last Name</label>
+            <input type="text" class="form-control" id="signupLastName" placeholder="Last name" required autocomplete="family-name" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="signupEmail">Email Address</label>
+          <input type="email" class="form-control" id="signupEmail" placeholder="hello@email.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="signupPhone">Phone Number</label>
+          <input type="tel" class="form-control" id="signupPhone" placeholder="+91 98765 43210" autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <div class="password-toggle">
+            <input type="password" class="form-control" id="signupPassword" placeholder="Create a password (min. 8 characters)" required autocomplete="new-password" />
+            <i class="bi bi-eye toggle-eye" role="button" aria-label="Show password"></i>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="signupConfirmPwd">Confirm Password</label>
+          <div class="password-toggle">
+            <input type="password" class="form-control" id="signupConfirmPwd" placeholder="Re-enter your password" required autocomplete="new-password" />
+            <i class="bi bi-eye toggle-eye" role="button" aria-label="Show password"></i>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="signupWeddingDate">Wedding Date (Optional)</label>
+          <input type="date" class="form-control" id="signupWeddingDate" />
+        </div>
+        <div class="form-group mb-3">
+          <label style="display:flex;align-items:flex-start;gap:0.5rem;cursor:pointer;color:rgba(255,255,255,0.75);font-size:0.8rem;line-height:1.5">
+            <input type="checkbox" required style="accent-color:var(--clr-primary);margin-top:2px" />
+            <span>I agree to the <a href="#" style="color:var(--clr-primary);margin:0 0.2rem">Terms of Service</a> and <a href="#" style="color:var(--clr-primary);margin-left:0.2rem">Privacy Policy</a></span>
+          </label>
+        </div>
+        <button type="submit" class="auth-submit-btn"><i class="bi bi-person-plus-fill me-2"></i> Create My Account</button>
+      </form>
+
+      <!-- Divider -->
+      <div class="auth-divider"><span>Or register with</span></div>
+
+      <!-- Social Signup -->
+      <button class="social-login-btn google-btn">
+        <svg width="18" height="18" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M44.5 20H24v8.5h11.8C34.7 33.9 29.8 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.7 20-21 0-1.4-.1-2.7-.5-4z" fill="#FFC107"/>
+          <path d="M6.3 14.7l7 5.1C15.1 16.3 19.2 13.5 24 13.5c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3 16.3 3 9.7 7.8 6.3 14.7z" fill="#FF3D00"/>
+          <path d="M24 45c5.5 0 10.5-1.9 14.4-5.2l-6.7-5.5C29.5 36.2 26.9 37 24 37c-5.8 0-10.7-3.9-12.5-9.3l-7 5.4C8.2 40.8 15.5 45 24 45z" fill="#4CAF50"/>
+          <path d="M44.5 20H24v8.5h11.8c-0.8 2.5-2.5 4.5-4.8 5.9l6.7 5.5C41.5 36.6 45 31.2 45 24c0-1.4-.1-2.7-.5-4z" fill="#1976D2"/>
+        </svg>
+        Sign up with Google
+      </button>
+
+      <button class="social-login-btn apple-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11"/>
+        </svg>
+        Sign up with Apple
+      </button>
+
+      <p class="auth-footer-text">
+        Already have an account? <a href="login.html">Sign in here</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
