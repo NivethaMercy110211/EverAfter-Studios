@@ -961,6 +961,10 @@ h6 {
     display: block;
   }
 
+  .reception-video-text span {
+    display: block;
+  }
+
   .portfolio-story-text span {
     display: block;
   }
@@ -1887,6 +1891,26 @@ h6 {
   line-height: 1.7;
 }
 
+.reception-highlights-grid .feature-title {
+  min-height: calc(1.2rem * 1.35 * 2);
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.reception-highlights-grid .feature-text {
+  max-width: 11.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reception-highlights-grid .feature-title-nowrap {
+  white-space: nowrap;
+  font-size: 1.05rem;
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
   body > section.section-pad:nth-of-type(6) .row.g-4 .feature-text {
     font-size: 0;
@@ -1995,12 +2019,26 @@ h6 {
   color: rgba(255, 255, 255, 0.86);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  white-space: nowrap;
+  white-space: normal;
+  line-height: 1.35;
+  min-height: calc(0.85rem * 1.35 * 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-label span {
+  display: block;
 }
 
 @media (min-width: 768px) {
   .stats-bar .row {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .stat-label {
+    max-width: 9.5rem;
   }
 }
 
