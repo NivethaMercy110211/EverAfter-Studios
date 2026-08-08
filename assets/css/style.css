@@ -29,6 +29,10 @@
   --clr-footer-text: #D4C4B0;
   --clr-overlay: rgba(28, 20, 14, 0.55);
   --clr-shadow: rgba(44, 36, 32, 0.12);
+  --btn-primary-bg: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+  --btn-primary-bg-hover: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  --btn-primary-shadow: 0 6px 20px rgba(201, 169, 110, 0.35);
+  --btn-primary-shadow-hover: 0 10px 28px rgba(201, 169, 110, 0.45);
 
   --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Jost', sans-serif;
@@ -357,7 +361,7 @@ h6 {
 
 /* Login button */
 .btn-nav-login {
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+  background: var(--btn-primary-bg);
   color: var(--clr-white) !important;
   border-radius: var(--radius-xl);
   padding: 0.42rem 1.4rem !important;
@@ -366,14 +370,14 @@ h6 {
   letter-spacing: 0.05em;
   border: none;
   transition: var(--transition);
-  box-shadow: 0 4px 14px rgba(201, 169, 110, 0.35);
+  box-shadow: var(--btn-primary-shadow);
 }
 
 .btn-nav-login:hover {
-  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  background: var(--btn-primary-bg-hover);
   color: var(--clr-white) !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.45);
+  box-shadow: var(--btn-primary-shadow-hover);
 }
 
 .btn-nav-login::after {
@@ -784,7 +788,7 @@ h6 {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 2rem;
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dk));
+  background: var(--btn-primary-bg);
   color: var(--clr-white);
   border: none;
   border-radius: var(--radius-xl);
@@ -794,14 +798,15 @@ h6 {
   text-transform: uppercase;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 18px rgba(201, 169, 110, 0.35);
+  box-shadow: var(--btn-primary-shadow);
+  text-decoration: none;
 }
 
 .btn-primary-ea:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(201, 169, 110, 0.45);
+  box-shadow: var(--btn-primary-shadow-hover);
   color: var(--clr-white);
-  background: linear-gradient(135deg, var(--clr-primary-dk), var(--clr-primary));
+  background: var(--btn-primary-bg-hover);
 }
 
 .btn-outline-ea {
@@ -857,7 +862,7 @@ h6 {
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 2rem;
-  background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent-lt));
+  background: var(--btn-primary-bg);
   color: var(--clr-white);
   border: none;
   border-radius: var(--radius-xl);
@@ -867,12 +872,14 @@ h6 {
   text-transform: uppercase;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 0 4px 18px rgba(123, 45, 66, 0.3);
+  box-shadow: var(--btn-primary-shadow);
+  text-decoration: none;
 }
 
 .btn-accent-ea:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(123, 45, 66, 0.4);
+  background: var(--btn-primary-bg-hover);
+  box-shadow: var(--btn-primary-shadow-hover);
   color: var(--clr-white);
 }
 
@@ -2877,7 +2884,7 @@ select.form-control-ea option {
 }
 
 .newsletter-form button {
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dk));
+  background: var(--btn-primary-bg);
   border: none;
   color: var(--clr-white);
   padding: 0.7rem 1.2rem;
@@ -2889,7 +2896,7 @@ select.form-control-ea option {
 }
 
 .newsletter-form button:hover {
-  background: var(--clr-accent);
+  background: var(--btn-primary-bg-hover);
 }
 
 .footer-note {
@@ -3283,7 +3290,7 @@ select.form-control-ea option {
 .auth-submit-btn {
   width: 100%;
   padding: 0.85rem;
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+  background: var(--btn-primary-bg);
   border: none;
   border-radius: var(--radius-xl);
   color: var(--clr-white);
@@ -3294,14 +3301,14 @@ select.form-control-ea option {
   cursor: pointer;
   transition: var(--transition);
   margin-top: 0.5rem;
-  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.3);
+  box-shadow: var(--btn-primary-shadow);
 }
 
 .auth-submit-btn:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, var(--clr-accent), var(--clr-primary));
+  background: var(--btn-primary-bg-hover);
   color: var(--clr-white);
-  box-shadow: 0 10px 28px rgba(201, 169, 110, 0.4);
+  box-shadow: var(--btn-primary-shadow-hover);
 }
 
 .auth-divider {
